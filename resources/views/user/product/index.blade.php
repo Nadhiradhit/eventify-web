@@ -13,10 +13,10 @@
                         <span class="ml-2">Produk dalam kategori {{ $category }}</span>
                     </h2>
                 </div>
-                <div class="content-card mt-5">
+                <div class="content-card mt-5 ">
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                         @foreach($products as $product)
-                            <div class="card bg-white border border-gray-200 rounded-xl shadow">
+                            <div class="card bg-white border border-gray-200 rounded-lg shadow">
                                 <div class="p-6">
                                     <a href="{{ url('product/detail/'.$product->id) }}">
                                         <img class="rounded-t-lg w-full h-64 rounded-lg"
@@ -29,7 +29,7 @@
                                             {{ $product->name }}
                                         </h5>
                                     </a>
-                                    <p class="mb-3 font-normal text-sm text-gray-700 dark:text-gray-400">
+                                    <p class="mb-3 font-normal text-sm text-gray-700 dark:text-gray-400 line-clamp-3">
                                         {{ $product->description }}
                                     </p>
                                     <div class="flex justify-between">

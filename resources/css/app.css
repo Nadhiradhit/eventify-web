@@ -37,7 +37,7 @@
     }
 
     .content-card{
-        @apply ml-16 lg:ml-36 mr-16;
+        @apply ml-16 lg:ml-36 mr-16 ;
     }
 
     .card{

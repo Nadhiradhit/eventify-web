@@ -1,11 +1,11 @@
 <!-- resources/views/product/detail.blade.php -->
 <x-user-layout>
-    <div class="flex justify-center items-center h-screen">
-        <div class="w-full max-w-6xl my-32 px-2">
-            <div class="flex flex-col md:flex-row justify-center items-center gap-8">
+    <div class="flex justify-center items-center ">
+        <div class="max-w-6xl my-32 px-2">
+            <div class="flex flex-col justify-center items-center gap-8">
                 <!-- Product Image -->
-                <div id="gallery" class="relative w-[80vh]" data-carousel="slide">
-                    <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                <div id="gallery" class="relative md:w-[110vh] w-full" data-carousel="slide">
+                    <div class="relative h-56 overflow-hidden rounded-lg md:h-96 ">
                         <div class="hidden duration-700 ease-in-out" data-carousel-item>
                             <img src="{{ asset($product->image1) }}" alt="Ini Image 1"
                                 class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
@@ -34,7 +34,7 @@
                     </div>
                     {{-- Slide --}}
                     <button type="button"
-                        class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                        class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none hide"
                         data-carousel-prev>
                         <span
                             class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
@@ -62,15 +62,17 @@
                 </div>
 
                 <!-- Product Details -->
-                <div class="title">
-                    <h1 class="text-4xl">{{ $product->name }}</h1>
-                    <p class="text-gray-600 text-sm mt-2">{{ $product->description }}</p>
-                    <p class="text-xl font-bold mt-4">Rp.{{ number_format($product->price, 0, ',', '.') }}</p>
+                <div class="title lg:w-[65rem]">
+                    <div class="">
+                        <h1 class="text-4xl">{{ $product->name }}</h1>
+                        <p class="text-gray-600 text-sm mt-2">{{ $product->description }}</p>
+                        <p class="text-xl font-bold mt-4 lg:text-end">Rp.{{ number_format($product->price, 0, ',', '.') }}</p>
+                    </div>
                     <!-- Buttons -->
-                    <div class="flex gap-4 mt-8 w-full">
+                    <div class="my-4">
                         <!-- Order Button -->
                         <a href="#"
-                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
+                            class="inline-flex justify-center items-center w-96 md:w-full px-3 py-4 text-sm font-medium text-white bg-blue-700 rounded-xl hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
                             data-target="#myModal">
                             Order Now
                         </a>

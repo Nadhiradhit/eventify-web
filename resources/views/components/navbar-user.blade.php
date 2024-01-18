@@ -1,4 +1,4 @@
-<nav class="w-full fixed z-20 p-2 top-0 start-0 bg-white font-plusJakarta shadow-md">
+<nav class="w-full fixed z-50 p-2 top-0 start-0 bg-white font-plusJakarta shadow-md">
     <div class="max-w-screen flex flex-wrap justify-between mx-[2rem] lg:mx-[6rem] p-4">
         <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
             <span class="self-center text-xl font-semibold whitespace-nowrap">Eventify</span>
@@ -14,7 +14,7 @@
         <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 md:mr-20" id="navbar-sticky">
             <ul class="flex flex-col p-4 md:p-0 mt-4 font-bold border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
                 <li>
-                    <a href="{{ url('/') }}" class="block py-2 px-3 text-white rounded md:text-gray-900 md:bg-transparent md:hover:text-blue-700 md:p-0"  aria-current="page">Home</a>
+                    <a href="{{ url('/') }}" class="block py-2 px-3  rounded md:text-gray-900 md:bg-transparent md:hover:text-blue-700 md:p-0"  aria-current="page">Home</a>
                 </li>
                 <li>
                     <a href="{{ url('/product') }}" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Product</a>
